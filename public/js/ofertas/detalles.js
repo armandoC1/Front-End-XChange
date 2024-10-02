@@ -18,7 +18,7 @@ window.onload = function() {
   // Obtener el id de la oferta desde la URL
   const urlParams = new URLSearchParams(window.location.search);
   const idOferta = urlParams.get('id');
-
+  
   // Fetch oferta y validaciones de la respuesta
   fetch(`http://localhost:8080/ofertas/findById/${idOferta}`)
     .then(response => {

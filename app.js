@@ -7,9 +7,19 @@ const PORT = 3000;
 // Configuración de archivos estáticos (CSS, JS, imágenes)
 app.use(express.static(path.join(__dirname, 'public')));
 
-// Ruta para la página principal
+// Ruta para redirigir a login cuando accedan a la ruta raíz '/'
 app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, 'views', 'index.html'));
+  res.redirect('/login');
+});
+
+// Ruta de inicio de sesión
+app.get('/login', (req, res) => {
+  res.sendFile(path.join(__dirname, 'views', 'usuario', 'login.html'));
+});
+
+// Ruta para la página de registro
+app.get('/registro', (req, res) => {
+  res.sendFile(path.join(__dirname, 'views', 'usuario', 'registro.html'));
 });
 
 // Ruta para servir 'detalles.html'
@@ -26,7 +36,10 @@ app.get('/ofertas', (req, res) => {
 app.get('/usuarios', (req, res) => {
   res.sendFile(path.join(__dirname, 'views', 'usuarios.html'));
 });
-
+//ruta general
+app.get('/index', (req, res) => {
+  res.sendFile(path.join(__dirname, 'views', 'index.html'));
+});
 // Ruta para la página de reseñas
 app.get('/reseñas', (req, res) => {
   res.sendFile(path.join(__dirname, 'views', 'reseñas.html'));

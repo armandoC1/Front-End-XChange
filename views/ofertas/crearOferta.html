@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crear Oferta</title>
+    <link rel="stylesheet" href="/css/ofertas/crearOferta.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Crear Nueva Oferta</h1>
+        <form id="crearOfertaForm">
+            <div class="form-group">
+                <label for="titulo">Título:</label>
+                <input type="text" id="titulo" name="titulo" required>
+            </div>
+            <div class="form-group">
+                <label for="descripcion">Descripción:</label>
+                <textarea id="descripcion" name="descripcion" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="condicion">Condición:</label>
+                <input type="text" id="condicion" name="condicion" required>
+            </div>
+            <div class="form-group">
+                <label for="estado">Estado:</label>
+                <input type="text" id="estado" name="estado" required>
+            </div>
+            <div class="form-group">
+                <label for="ubicacion">Ubicación:</label>
+                <input type="text" id="ubicacion" name="ubicacion" required>
+            </div>
+            <div class="form-group">
+                <label for="categoria">Categoría:</label>
+                <select id="categoria" name="categoria" required>
+                    <!-- Categorías se llenarán desde JS -->
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="usuario">Usuario:</label>
+                <select id="usuario" name="usuario" required>
+                    <!-- Usuarios se llenarán desde JS -->
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="imagenes">Imágenes:</label>
+                <input type="file" id="imagenes" name="imagenes" multiple required>
+            </div>
+            <button type="submit">Crear Oferta</button>
+        </form>
+    </div>
+
+    <script src="/js/cofertas/crearOferta.js"></script>
+</body>
+</html>

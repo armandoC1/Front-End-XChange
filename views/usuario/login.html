@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Iniciar Sesión</title>
+    <link rel="stylesheet" href="/css/usuarios/login.css">
+</head>
+
+<body>
+    <!-- Aquí estará el contenedor del mensaje -->
+
+
+    <div class="container">
+        <h2>Iniciar Sesión</h2>
+
+        <!-- Mensaje de alerta -->
+        <div id="messageBox" class="hidden"></div>
+
+        <form id="loginForm">
+            <label for="correo">Correo Electrónico</label>
+            <input type="email" id="correo" placeholder="Ingresa tu correo" required>
+
+            <label for="contrasena">Contraseña</label>
+            <input type="password" id="contrasena" placeholder="Ingresa tu contraseña" required>
+
+            <button type="submit">Iniciar Sesión</button>
+        </form>
+
+        <div class="register-link">
+            ¿No tienes cuenta? <a href="/registro">Regístrate aquí</a>
+        </div>
+    </div>
+
+</body>
+<script src="/js/usuarios/login.js"></script>
+
+</html>
